@@ -11,7 +11,7 @@ public class ContaBancaria {
         }
     }
     public boolean sacar(double valor) {
-        double novoSaldo = saldo - valor - taxa;
+        double novoSaldo = this.getSaldo() - valor - taxa;
         if (novoSaldo > 0) {
             this.setSaldo(novoSaldo);
             return true;
