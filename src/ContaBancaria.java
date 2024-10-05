@@ -3,11 +3,11 @@ public class ContaBancaria {
     private double saldo;
     private static double taxa = 1.50;
     public ContaBancaria(double saldoInicial) {
-        this.saldo = saldoInicial;
+        this.setSaldo(saldoInicial);
     }
     public void depositar(double valor) {
         if (valor > 0) {
-            saldo += valor;
+            this.setSaldo(this.getSaldo() + valor);
         }
     }
     public boolean sacar(double valor) {
@@ -22,8 +22,15 @@ public class ContaBancaria {
     public double getSaldo() {
         return saldo;
     }
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public boolean setSaldo(double saldo) {
+        if(saldo >= 0) {
+            this.saldo = saldo;
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
 }
