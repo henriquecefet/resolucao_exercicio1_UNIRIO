@@ -19,7 +19,7 @@ public class Main  {
         frame.setSize(300, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Painel principal com BoxLayout para permitir pular linhas
+        // Painel principal com BoxLayout.
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
@@ -27,7 +27,7 @@ public class Main  {
         saldoLabel = new JLabel("Saldo: R$ " + String.format("%.2f", conta.getSaldo()));
         panel.add(saldoLabel);
 
-        // Adiciona um espaçamento (simulando pular linha)
+        // Adiciona um espaçamento.
         panel.add(Box.createVerticalStrut(15));  // 15 pixels de espaçamento
 
         // Campo de texto para depositar
